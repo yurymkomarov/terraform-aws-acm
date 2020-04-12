@@ -4,7 +4,8 @@ resource "aws_acm_certificate" "this" {
   validation_method         = "DNS"
 
   tags = {
-    Name = "${terraform.workspace}-wp"
+    Name      = var.name
+    Workspace = terraform.workspace
   }
 
   lifecycle {
