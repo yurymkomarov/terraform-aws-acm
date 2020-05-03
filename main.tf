@@ -5,6 +5,7 @@ resource "aws_acm_certificate" "this" {
 
   tags = {
     Name      = var.name
+    Module    = path.module
     Workspace = terraform.workspace
   }
 
